@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALIST Global Business Empire</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: gold;
+        }
+
+        /* Watermark Style */
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: rgba(255, 215, 0, 0.1); /* Gold color with transparency */
+            font-weight: bold;
+            z-index: -1; /* Ensures it's in the background */
+            white-space: nowrap;
+            pointer-events: none;
+            text-transform: uppercase;
+            user-select: none;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            color: gold;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: gold;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* Logo Styling */
+        #logo {
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        #logo img {
+            height: 100%;
+        }
+
+        /* Welcome Section Styles */
+        #welcome {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(black, #333);
+            color: gold;
+            overflow: hidden;
+        }
+
+        .welcome-animation {
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-size: 3rem;
+            font-weight: bold;
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid gold; /* Cursor Effect */
+            width: 28ch; /* Adjust based on the text length */
+            animation: typing 4s steps(28, end), blink 0.5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 28ch; /* Match the width of the text */
+            }
+        }
+
+        @keyframes blink {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: gold;
+            }
+        }
+
+        /* Vision & Mission Styles */
+        #vision-mission {
+            padding: 2rem;
+            background-color: #222;
+            color: gold;
+            text-align: center;
+        }
+
+        #vision-mission h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #vision-mission .content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #vision-mission h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #vision-mission p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Gallery Styles */
+        #team-gallery {
+            padding: 2rem;
+            background-color: black;
+            color: gold;
+            text-align: center;
+        }
+
+        #team-gallery h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #team-gallery .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #team-gallery img {
+            height: 200px;
+            width: auto;
+            border: 2px solid gold;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #team-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px gold;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 2rem;
+            background-color: #333;
+            color: gold;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #contact a {
+            color: gold;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact a:hover {
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            padding: 1rem;
+            background-color: #111;
+            color: gold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Watermark -->
+    <div class="watermark">Coming Soon New Future</div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div id="logo">
+            <img src="https://i.postimg.cc/SsPsWgSH/20241129-104124.jpg" alt="CATALIST Global Business Empire Logo">
+        </div>
+        <div>
+            <a href="#welcome">Home</a>
+            <a href="#vision-mission">Vision & Mission</a>
+            <a href="#team-gallery">Our Team</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section id="welcome">
+        <div class="welcome-animation">
+            <h1 id="typing-text">CATALIST GLOBAL BUSINESS EMPIRE</h1>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section id="vision-mission">
+        <h2>Our Vision & Mission</h2>
+        <div class="content">
+            <div>
+                <h3>Our Vision</h3>
+                <p>Empowering the next generation to create young billionaires through innovation and opportunity.</p>
+            </div>
+            <div>
+                <h3>Our Mission</h3>
+                <p>To inspire, educate, and support ambitious individuals in achieving financial success and becoming young billionaires through innovation, mentorship, and strategic opportunities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Gallery -->
+    <section id="team-gallery">
+        <h2>Our Team</h2>
+        <div class="gallery">
+            <img src="https://i.postimg.cc/3wnCHQ1p/IMG-20241122-222000-137.jpg" alt="Team Member 1">
+            <img src="https://i.postimg.cc/KYPLZS5Q/IMG-20241129-123259-681.jpg" alt="Team Member 2">
+            <img src="https://i.postimg.cc/J7vhdYNh/file-CDv-TTj3kqt-TYShw-YYY9r-Tb.webp" alt="Team Member 3">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: <a href="tel:0944146818">0944146818</a></p>
+        <p>Email: <a href="mailto:leulyosef@gmail.com">leulyosef@gmail.com</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 CATALIST Global Business Empire. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Auto-Redirect -->
+    <script>
+        // Redirect to the home page after 10 seconds
+        setTimeout(() => {
+            window.location.href = "#vision-mission"; // Redirect to the Vision & Mission section
+        }, 10000); // 10 seconds in milliseconds
+    </script>
+</body>
+</html>
