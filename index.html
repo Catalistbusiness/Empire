@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CATALIST Global Business Empire</title>
+    <title>CATALYST Global Business Empire</title>
     <style>
         /* Global Styles */
         body {
@@ -12,22 +12,6 @@
             font-family: 'Arial', sans-serif;
             background-color: black;
             color: gold;
-        }
-
-        /* Watermark Style */
-        .watermark {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 4rem;
-            color: rgba(255, 215, 0, 0.1); /* Gold color with transparency */
-            font-weight: bold;
-            z-index: -1; /* Ensures it's in the background */
-            white-space: nowrap;
-            pointer-events: none;
-            text-transform: uppercase;
-            user-select: none;
         }
 
         /* Navigation Bar */
@@ -56,120 +40,56 @@
         }
 
         /* Logo Styling */
-        #logo {
-            height: 60px;
-            display: flex;
-            align-items: center;
-        }
-
         #logo img {
-            height: 100%;
+            height: 50px;
         }
 
-        /* Welcome Section Styles */
-        #welcome {
+        /* Z-Pattern Section Styles */
+        .z-section {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            height: 100vh;
-            background: linear-gradient(black, #333);
-            color: gold;
-            overflow: hidden;
-        }
-
-        .welcome-animation {
-            text-align: center;
-            font-family: 'Courier New', monospace;
-            font-size: 3rem;
-            font-weight: bold;
-            position: relative;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid gold; /* Cursor Effect */
-            width: 28ch; /* Adjust based on the text length */
-            animation: typing 4s steps(28, end), blink 0.5s step-end infinite;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-            to {
-                width: 28ch; /* Match the width of the text */
-            }
-        }
-
-        @keyframes blink {
-            from, to {
-                border-color: transparent;
-            }
-            50% {
-                border-color: gold;
-            }
-        }
-
-        /* Vision & Mission Styles */
-        #vision-mission {
             padding: 2rem;
-            background-color: #222;
-            color: gold;
-            text-align: center;
+            gap: 2rem;
         }
 
-        #vision-mission h2 {
-            font-size: 2.5rem;
+        .z-section:nth-child(odd) {
+            background-color: #222;
+        }
+
+        .z-section:nth-child(even) {
+            background-color: #333;
+        }
+
+        .z-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid gold;
+        }
+
+        .z-section .text-content {
+            max-width: 50%;
+        }
+
+        .z-section h2 {
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
 
-        #vision-mission .content {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        #vision-mission h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        #vision-mission p {
+        .z-section p {
             font-size: 1rem;
             line-height: 1.5;
         }
 
-        /* Gallery Styles */
-        #team-gallery {
-            padding: 2rem;
-            background-color: black;
+        /* Add the style for "CATALYST GLOBAL BUSINESS EMPIRE" */
+        #vision h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
             color: gold;
             text-align: center;
-        }
-
-        #team-gallery h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        #team-gallery .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        #team-gallery img {
-            height: 200px;
-            width: auto;
-            border: 2px solid gold;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        #team-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 10px gold;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
         /* Contact Section */
@@ -195,6 +115,21 @@
             color: white;
         }
 
+        #contact .social-icons {
+            margin-top: 1rem;
+        }
+
+        #contact .social-icons img {
+            width: 40px;
+            height: 40px;
+            margin: 0 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        #contact .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
         /* Footer */
         footer {
             padding: 1rem;
@@ -202,75 +137,132 @@
             color: gold;
             text-align: center;
         }
+
+        /* Team Gallery (Collage) */
+        .team-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .team-gallery a {
+            display: block;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid gold;
+        }
+
+        .team-gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .team-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design - Ensure good size on smaller screens */
+        @media (max-width: 768px) {
+            .team-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust further for mobile */
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Watermark -->
-    <div class="watermark">Coming Soon New Future</div>
-
     <!-- Navigation Bar -->
     <nav>
         <div id="logo">
-            <img src="https://i.postimg.cc/SsPsWgSH/20241129-104124.jpg" alt="CATALIST Global Business Empire Logo">
+            <a href="https://postimages.org/" target="_blank">
+                <img src="https://i.postimg.cc/BZFsJVh8/20241201-122809.jpg" border="0" alt="20241201-122809"/>
+            </a>
         </div>
         <div>
-            <a href="#welcome">Home</a>
-            <a href="#vision-mission">Vision & Mission</a>
+            <a href="#vision">Vision</a>
+            <a href="#mission">Mission</a>
             <a href="#team-gallery">Our Team</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <!-- Welcome Section -->
-    <section id="welcome">
-        <div class="welcome-animation">
-            <h1 id="typing-text">CATALIST GLOBAL BUSINESS EMPIRE</h1>
+    <!-- Z-Pattern Layout -->
+
+    <!-- Section 1: Vision -->
+    <section id="vision" class="z-section">
+        <div class="text-content">
+            <h1>CATALYST GLOBAL BUSINESS EMPIRE</h1>
+            <h2>Our Vision</h2>
+            <p>Empowering the next generation to create young billionaires through innovation and opportunity.</p>
+        </div>
+        <div>
+            <a href="https://postimg.cc/r0XKB9HJ" target="_blank">
+                <img src="https://i.postimg.cc/cH6w89MV/OIG4-1.jpg" alt="Vision Image">
+            </a>
         </div>
     </section>
 
-    <!-- Vision & Mission -->
-    <section id="vision-mission">
-        <h2>Our Vision & Mission</h2>
-        <div class="content">
-            <div>
-                <h3>Our Vision</h3>
-                <p>Empowering the next generation to create young billionaires through innovation and opportunity.</p>
-            </div>
-            <div>
-                <h3>Our Mission</h3>
-                <p>To inspire, educate, and support ambitious individuals in achieving financial success and becoming young billionaires through innovation, mentorship, and strategic opportunities.</p>
-            </div>
+    <!-- Section 2: Mission -->
+    <section id="mission" class="z-section">
+        <div>
+            <a href="https://postimg.cc/bsztFRDP" target="_blank">
+                <img src="https://i.postimg.cc/yYRyxQ7D/OIG2-1.jpg" alt="Mission Image">
+            </a>
+        </div>
+        <div class="text-content">
+            <h2>Our Mission</h2>
+            <p>To inspire, educate, and support ambitious individuals in achieving financial success and becoming young billionaires through innovation, mentorship, and strategic opportunities.</p>
         </div>
     </section>
 
-    <!-- Team Gallery -->
-    <section id="team-gallery">
-        <h2>Our Team</h2>
-        <div class="gallery">
-            <img src="https://i.postimg.cc/3wnCHQ1p/IMG-20241122-222000-137.jpg" alt="Team Member 1">
-            <img src="https://i.postimg.cc/KYPLZS5Q/IMG-20241129-123259-681.jpg" alt="Team Member 2">
-            <img src="https://i.postimg.cc/J7vhdYNh/file-CDv-TTj3kqt-TYShw-YYY9r-Tb.webp" alt="Team Member 3">
+    <!-- Section 3: Team Gallery (Collage) -->
+    <section id="team-gallery" class="z-section">
+        <div class="text-content">
+            <h2>Meet Our Team</h2>
+            <p>Our dedicated team is committed to making the vision of creating young billionaires a reality through innovative strategies and collaboration.</p>
+        </div>
+
+        <!-- Team Gallery (Collage Style) -->
+        <div class="team-gallery">
+            <a href="https://postimg.cc/B8YxcdZH" target="_blank">
+                <img src="https://i.postimg.cc/TwGCG6Z7/IMG-20241201-011645-198.jpg" alt="Team Image 1">
+            </a>
+            <a href="https://postimg.cc/B8YxcdZH" target="_blank">
+                <img src="https://i.postimg.cc/3wnCHQ1p/IMG-20241122-222000-137.jpg" alt="Team Image 2">
+            </a>
+            <a href="https://postimg.cc/B8YxcdZH" target="_blank">
+                <img src="https://i.postimg.cc/fWtxq2t8/OIG3-2.jpg" alt="Team Image 3">
+            </a>
+            <a href="https://postimg.cc/mP1DKsD7" target="_blank">
+                <img src="https://i.postimg.cc/0ycwM51X/Talent-wins-games-but-teamwork-and-intelligence-wins-championships.png" alt="Team Image 4">
+            </a>
+            <a href="https://postimg.cc/4KmxpTCY" target="_blank">
+                <img src="https://i.postimg.cc/yNT34Vvy/IMG-20241201-002539-798.jpg" alt="Team Image 5">
+            </a>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Phone: <a href="tel:0944146818">0944146818</a></p>
+        <p>Phone: <a href="tel:+251944146818">+251944146818</a></p>
         <p>Email: <a href="mailto:leulyosef@gmail.com">leulyosef@gmail.com</a></p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 CATALIST Global Business Empire. All Rights Reserved.</p>
-    </footer>
-
-    <!-- JavaScript for Auto-Redirect -->
-    <script>
-        // Redirect to the home page after 10 seconds
-        setTimeout(() => {
-            window.location.href = "#vision-mission"; // Redirect to the Vision & Mission section
-        }, 10000); // 10 seconds in milliseconds
-    </script>
-</body>
-</html>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/leulyosef73?igsh=NGMyZGgxN2gxM3Np" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <!-- Adding Telegram Icon -->
+            <a href="https://
