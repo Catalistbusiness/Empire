@@ -102,7 +102,55 @@
             border: 2px solid gold;
         }
 
-        /* Team Gallery (Collage) */
+        /* Core Values Section */
+        #core-values {
+            padding: 2rem;
+            background-color: #222;
+            text-align: center;
+        }
+
+        #core-values h2 {
+            font-size: 2rem;
+            color: gold;
+            margin-bottom: 1rem;
+        }
+
+        #core-values p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            color: #ccc;
+        }
+
+        .core-values-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .core-value {
+            flex: 1 1 300px;
+            background-color: #333;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid gold;
+            text-align: center;
+        }
+
+        .core-value h3 {
+            color: gold;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .core-value p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Team Gallery */
         .team-gallery {
             padding: 2rem;
             background-color: #222;
@@ -186,12 +234,13 @@
     <nav>
         <div id="logo">
             <a href="https://postimages.org/" target="_blank">
-                <img src="https://i.postimg.cc/BZFsJVh8/20241201-122809.jpg" border="0" alt="Logo">
+                <img src="https://i.postimg.cc/BZFsJVh8/20241201-122809.jpg" alt="Logo">
             </a>
         </div>
         <div>
             <a href="#vision">Vision</a>
             <a href="#mission">Mission</a>
+            <a href="#core-values">Core Values</a>
             <a href="#team-gallery">Our Team</a>
             <a href="#contact">Contact</a>
         </div>
@@ -212,8 +261,32 @@
         <img src="https://i.postimg.cc/yYRyxQ7D/OIG2-1.jpg" alt="Mission Image">
     </section>
 
+    <!-- Core Values Section -->
+    <section id="core-values">
+        <h2>Our Core Values</h2>
+        <p>Guiding principles that drive us to create the next generation of young billionaires.</p>
+        <div class="core-values-grid">
+            <div class="core-value">
+                <h3>Innovation</h3>
+                <p>We embrace creativity and cutting-edge solutions to achieve groundbreaking success.</p>
+            </div>
+            <div class="core-value">
+                <h3>Integrity</h3>
+                <p>Honesty and transparency are at the core of everything we do.</p>
+            </div>
+            <div class="core-value">
+                <h3>Excellence</h3>
+                <p>We strive for perfection and exceed expectations in all our endeavors.</p>
+            </div>
+            <div class="core-value">
+                <h3>Collaboration</h3>
+                <p>Teamwork and partnerships are key to achieving our ambitious goals.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Team Gallery -->
-    <section id="team-gallery">
+    <section id="team-gallery" class="team-gallery">
         <h2>Meet Our Team</h2>
         <p>Our dedicated team is committed to making the vision of creating young billionaires a reality through innovative strategies and collaboration.</p>
         <div class="gallery-grid">
