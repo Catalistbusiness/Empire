@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    
+    <!-- Standard Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CATALYST Global Business Empire</title>
+
     <style>
         /* Global Styles */
         body {
@@ -12,6 +20,35 @@
             font-family: 'Arial', sans-serif;
             background-color: black;
             color: gold;
+        }
+
+        /* Cookie Consent Banner */
+        #cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #222;
+            color: gold;
+            padding: 1rem;
+            text-align: center;
+            z-index: 9999;
+            display: none;
+            border-top: 2px solid gold;
+        }
+
+        #cookie-consent button {
+            background: gold;
+            color: black;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin-left: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #cookie-consent button:hover {
+            background: #d4af37;
         }
 
         /* Navigation Bar */
@@ -230,10 +267,17 @@
     </style>
 </head>
 <body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent">
+        <p>We use cookies to ensure you get the best experience on our website. 
+           <a href="privacy-policy.html" style="color: gold;">Learn more</a></p>
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+
     <!-- Navigation Bar -->
     <nav>
         <div id="logo">
-            <a href="https://postimages.org/" target="_blank">
+            <a href="https://postimages.org/" target="_blank" rel="noopener noreferrer">
                 <img src="https://i.postimg.cc/BZFsJVh8/20241201-122809.jpg" alt="Logo">
             </a>
         </div>
@@ -304,7 +348,7 @@
         <p>Phone: <a href="tel:+251944146818">+251944146818</a></p>
         <p>Email: <a href="mailto:catalystglobalbusinessempire@gmail.com">catalystglobalbusinessempire@gmail.com</a></p>
         <div class="social-icons">
-            <a href="https://www.instagram.com/leulyosef73" target="_blank">
+            <a href="https://www.instagram.com/leulyosef73" target="_blank" rel="noopener noreferrer">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
             </a>
         </div>
@@ -312,7 +356,23 @@
 
     <!-- Footer -->
     <footer>
-        &copy; 2025 CATALYST Global Business Empire. All rights reserved.
+        &copy; 2025 CATALYST Global Business Empire. All rights reserved.<br>
+        <a href="privacy-policy.html" style="color: gold;">Privacy Policy</a> | 
+        <a href="terms-of-service.html" style="color: gold;">Terms of Service</a>
     </footer>
+
+    <!-- Cookie Consent Script -->
+    <script>
+        function acceptCookies() {
+            document.getElementById('cookie-consent').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+            // Add your cookie setting logic here
+        }
+
+        // Show banner if not accepted
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-consent').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
