@@ -1,0 +1,6 @@
+# CATALYST Global Business Empire Security Policy
+Contact: mailto:catalystglobalbusinessempire@gmail.com
+Encryption: https://catalyst.com/pgp-key.txt
+Acknowledgments: https://catalyst.com/security-hall-of-fame
+Policy: https://catalyst.com/security-policy
+Expires: 2027-12-31T00:00:00.000Z
