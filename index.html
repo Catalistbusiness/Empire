@@ -1,357 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval';">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-    
-    <!-- Standard Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CATALYST Global Business Empire</title>
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+  
+  <!-- Standard Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CATALYST Global Business Empire</title>
 
-    <style>
-        /* Global Styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: black;
-            color: gold;
-        }
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: black;
+      color: gold;
+    }
 
-        /* Cookie Consent Banner */
-        #cookie-consent {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #222;
-            color: gold;
-            padding: 1rem;
-            text-align: center;
-            z-index: 9999;
-            display: none;
-            border-top: 2px solid gold;
-        }
-        #cookie-consent button {
-            background: gold;
-            color: black;
-            border: none;
-            padding: 0.5rem 1rem;
-            margin-left: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        #cookie-consent button:hover {
-            background: #d4af37;
-        }
+    /* Cookie Consent Banner */
+    #cookie-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #222;
+      color: gold;
+      padding: 1rem;
+      text-align: center;
+      z-index: 9999;
+      display: none;
+      border-top: 2px solid gold;
+    }
+    #cookie-consent button {
+      background: gold;
+      color: black;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #cookie-consent button:hover {
+      background: #d4af37;
+    }
 
-        /* Navigation Bar */
-        nav {
-            background-color: #333;
-            color: gold;
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav a {
-            text-decoration: none;
-            color: gold;
-            margin: 0 1rem;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: white;
-        }
-        /* Logo Styling */
-        #logo img {
-            height: 50px;
-        }
+    /* Navigation Bar */
+    nav {
+      background-color: #333;
+      color: gold;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* Luxury animation */
+      animation: fadeIn 1s ease-out;
+    }
+    nav a {
+      text-decoration: none;
+      color: gold;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: white;
+    }
+    /* Logo Styling */
+    #logo img {
+      height: 50px;
+    }
 
-        /* Vision Section Styling */
-        #vision {
-            padding: 2rem;
-            text-align: center;
-            background-color: #222;
-        }
-        #vision h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        #vision h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: gold;
-        }
-        #vision p {
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        #vision img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 2px solid gold;
-        }
+    /* Vision Section Styling */
+    #vision {
+      padding: 2rem;
+      text-align: center;
+      background-color: #222;
+      animation: fadeIn 1.5s ease-out;
+    }
+    #vision h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      /* Luxury shimmer effect added via keyframes below */
+      animation: fadeIn 1.5s ease-out forwards, shine 3s linear infinite;
+      background: linear-gradient(90deg, gold, white, gold);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    #vision h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: gold;
+    }
+    #vision p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    #vision img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid gold;
+      transition: transform 0.3s ease;
+    }
 
-        /* Mission Section Styling */
-        #mission {
-            padding: 2rem;
-            background-color: #333;
-            text-align: center;
-        }
-        #mission h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        #mission p {
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        #mission img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 2px solid gold;
-        }
+    /* Mission Section Styling */
+    #mission {
+      padding: 2rem;
+      background-color: #333;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out;
+    }
+    #mission h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #mission p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    #mission img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid gold;
+      transition: transform 0.3s ease;
+    }
 
-        /* Core Values Section */
-        #core-values {
-            padding: 2rem;
-            background-color: #222;
-            text-align: center;
-        }
-        #core-values h2 {
-            font-size: 2rem;
-            color: gold;
-            margin-bottom: 1rem;
-        }
-        #core-values p {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            color: #ccc;
-        }
-        .core-values-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .core-value {
-            flex: 1 1 300px;
-            background-color: #333;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border: 2px solid gold;
-            text-align: center;
-        }
-        .core-value h3 {
-            color: gold;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .core-value p {
-            color: #ccc;
-            line-height: 1.6;
-        }
+    /* Core Values Section */
+    #core-values {
+      padding: 2rem;
+      background-color: #222;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out;
+    }
+    #core-values h2 {
+      font-size: 2rem;
+      color: gold;
+      margin-bottom: 1rem;
+    }
+    #core-values p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: #ccc;
+    }
+    .core-values-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .core-value {
+      flex: 1 1 300px;
+      background-color: #333;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 2px solid gold;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .core-value h3 {
+      color: gold;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .core-value p {
+      color: #ccc;
+      line-height: 1.6;
+    }
 
-        /* Team Gallery */
-        .team-gallery {
-            padding: 2rem;
-            background-color: #222;
-        }
-        .team-gallery h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        .team-gallery p {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .gallery-grid img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid gold;
-        }
+    /* Team Gallery */
+    .team-gallery {
+      padding: 2rem;
+      background-color: #222;
+      animation: fadeIn 1.5s ease-out;
+    }
+    .team-gallery h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .team-gallery p {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid gold;
+      transition: transform 0.3s ease;
+    }
 
-        /* Contact Section */
-        #contact {
-            padding: 2rem;
-            background-color: #333;
-            text-align: center;
-        }
-        #contact h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        #contact a {
-            color: gold;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        #contact a:hover {
-            color: white;
-        }
-        #contact .social-icons {
-            margin-top: 1rem;
-        }
-        #contact .social-icons img {
-            width: 40px;
-            height: 40px;
-            margin: 0 0.5rem;
-            transition: transform 0.3s;
-        }
-        #contact .social-icons img:hover {
-            transform: scale(1.2);
-        }
+    /* Contact Section */
+    #contact {
+      padding: 2rem;
+      background-color: #333;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out;
+    }
+    #contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #contact a {
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #contact a:hover {
+      color: white;
+    }
+    #contact .social-icons {
+      margin-top: 1rem;
+    }
+    #contact .social-icons img {
+      width: 40px;
+      height: 40px;
+      margin: 0 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    #contact .social-icons img:hover {
+      transform: scale(1.2);
+    }
 
-        /* Footer */
-        footer {
-            padding: 1rem;
-            background-color: #111;
-            color: gold;
-            text-align: center;
-        }
-    </style>
+    /* Footer */
+    footer {
+      padding: 1rem;
+      background-color: #111;
+      color: gold;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    /* Hover effect for images and core values */
+    img:hover, .core-value:hover {
+      transform: scale(1.05);
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: -200% center;
+      }
+      100% {
+        background-position: 200% center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-consent">
-        <p>We use cookies to ensure you get the best experience on our website. 
-           <a href="privacy-policy.html" style="color: gold;">Learn more</a></p>
-        <button onclick="acceptCookies()">Accept</button>
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent">
+    <p>We use cookies to ensure you get the best experience on our website. 
+      <a href="privacy-policy.html" style="color: gold;">Learn more</a>
+    </p>
+    <button onclick="acceptCookies()">Accept</button>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div id="logo">
+      <!-- Option 1: Clicking the logo navigates to about.html -->
+      <a href="about.html">
+        <img src="https://i.postimg.cc/BZFsJVh8/20241201-122809.jpg" alt="Logo">
+      </a>
     </div>
+    <div>
+      <a href="#vision">Vision</a>
+      <a href="#mission">Mission</a>
+      <a href="#core-values">Core Values</a>
+      <a href="#team-gallery">Our Team</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div id="logo">
-            <!-- Option 1: Clicking the logo navigates to about.html -->
-            <a href="about.html">
-                <img src="https://i.postimg.cc/BZFsJVh8/20241201-122809.jpg" alt="Logo">
-            </a>
-        </div>
-        <div>
-            <a href="#vision">Vision</a>
-            <a href="#mission">Mission</a>
-            <a href="#core-values">Core Values</a>
-            <a href="#team-gallery">Our Team</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+  <!-- Vision Section -->
+  <section id="vision">
+    <h1>CATALYST GLOBAL BUSINESS EMPIRE</h1>
+    <h2>Our Vision</h2>
+    <p>Empowering the next generation to create young billionaires through innovation and opportunity.</p>
+    <img src="https://i.postimg.cc/cH6w89MV/OIG4-1.jpg" alt="Vision Image">
+  </section>
 
-    <!-- Vision Section -->
-    <section id="vision">
-        <h1>CATALYST GLOBAL BUSINESS EMPIRE</h1>
-        <h2>Our Vision</h2>
-        <p>Empowering the next generation to create young billionaires through innovation and opportunity.</p>
-        <img src="https://i.postimg.cc/cH6w89MV/OIG4-1.jpg" alt="Vision Image">
-    </section>
+  <!-- Mission Section -->
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>To inspire, educate, and support ambitious individuals in achieving financial success and becoming young billionaires through innovation, mentorship, and strategic opportunities.</p>
+    <img src="https://i.postimg.cc/yYRyxQ7D/OIG2-1.jpg" alt="Mission Image">
+  </section>
 
-    <!-- Mission Section -->
-    <section id="mission">
-        <h2>Our Mission</h2>
-        <p>To inspire, educate, and support ambitious individuals in achieving financial success and becoming young billionaires through innovation, mentorship, and strategic opportunities.</p>
-        <img src="https://i.postimg.cc/yYRyxQ7D/OIG2-1.jpg" alt="Mission Image">
-    </section>
+  <!-- Core Values Section -->
+  <section id="core-values">
+    <h2>Our Core Values</h2>
+    <p>Guiding principles that drive us to create the next generation of young billionaires.</p>
+    <div class="core-values-grid">
+      <div class="core-value">
+        <h3>Innovation</h3>
+        <p>We embrace creativity and cutting-edge solutions to achieve groundbreaking success.</p>
+      </div>
+      <div class="core-value">
+        <h3>Integrity</h3>
+        <p>Honesty and transparency are at the core of everything we do.</p>
+      </div>
+      <div class="core-value">
+        <h3>Excellence</h3>
+        <p>We strive for perfection and exceed expectations in all our endeavors.</p>
+      </div>
+      <div class="core-value">
+        <h3>Collaboration</h3>
+        <p>Teamwork and partnerships are key to achieving our ambitious goals.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Core Values Section -->
-    <section id="core-values">
-        <h2>Our Core Values</h2>
-        <p>Guiding principles that drive us to create the next generation of young billionaires.</p>
-        <div class="core-values-grid">
-            <div class="core-value">
-                <h3>Innovation</h3>
-                <p>We embrace creativity and cutting-edge solutions to achieve groundbreaking success.</p>
-            </div>
-            <div class="core-value">
-                <h3>Integrity</h3>
-                <p>Honesty and transparency are at the core of everything we do.</p>
-            </div>
-            <div class="core-value">
-                <h3>Excellence</h3>
-                <p>We strive for perfection and exceed expectations in all our endeavors.</p>
-            </div>
-            <div class="core-value">
-                <h3>Collaboration</h3>
-                <p>Teamwork and partnerships are key to achieving our ambitious goals.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Team Gallery -->
+  <section id="team-gallery" class="team-gallery">
+    <h2>Meet Our Team</h2>
+    <p>Our dedicated team is committed to making the vision of creating young billionaires a reality through innovative strategies and collaboration.</p>
+    <div class="gallery-grid">
+      <img src="https://i.postimg.cc/TwGCG6Z7/IMG-20241201-011645-198.jpg" alt="Team Image 1">
+      <img src="https://i.postimg.cc/3wnCHQ1p/IMG-20241122-222000-137.jpg" alt="Team Image 2">
+      <img src="https://i.postimg.cc/fWtxq2t8/OIG3-2.jpg" alt="Team Image 3">
+      <img src="https://i.postimg.cc/0ycwM51X/Talent-wins-games-but-teamwork-and-intelligence-wins-championships.png" alt="Team Image 4">
+      <img src="https://i.postimg.cc/yNT34Vvy/IMG-20241201-002539-798.jpg" alt="Team Image 5">
+    </div>
+  </section>
 
-    <!-- Team Gallery -->
-    <section id="team-gallery" class="team-gallery">
-        <h2>Meet Our Team</h2>
-        <p>Our dedicated team is committed to making the vision of creating young billionaires a reality through innovative strategies and collaboration.</p>
-        <div class="gallery-grid">
-            <img src="https://i.postimg.cc/TwGCG6Z7/IMG-20241201-011645-198.jpg" alt="Team Image 1">
-            <img src="https://i.postimg.cc/3wnCHQ1p/IMG-20241122-222000-137.jpg" alt="Team Image 2">
-            <img src="https://i.postimg.cc/fWtxq2t8/OIG3-2.jpg" alt="Team Image 3">
-            <img src="https://i.postimg.cc/0ycwM51X/Talent-wins-games-but-teamwork-and-intelligence-wins-championships.png" alt="Team Image 4">
-            <img src="https://i.postimg.cc/yNT34Vvy/IMG-20241201-002539-798.jpg" alt="Team Image 5">
-        </div>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: <a href="tel:+251944146818">+251944146818</a></p>
+    <p>Contact Form: 
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJWPR-NShhjjNP-PQ77cbr0fTNYBhWDl51t5cEAV76PijAyQ/viewform?usp=header_link" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="color: gold;">
+        Fill out our contact form
+      </a>
+    </p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/leulyosef73" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Phone: <a href="tel:+251944146818">+251944146818</a></p>
-        <p>Contact Form: 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJWPR-NShhjjNP-PQ77cbr0fTNYBhWDl51t5cEAV76PijAyQ/viewform?usp=header_link" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               style="color: gold;">
-                Fill out our contact form
-            </a>
-        </p>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/leulyosef73" target="_blank" rel="noopener noreferrer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 CATALYST Global Business Empire. All rights reserved.<br>
+    <a href="privacy-policy.html" style="color: gold;">Privacy Policy</a> | 
+    <a href="terms-of-service.html" style="color: gold;">Terms of Service</a>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2025 CATALYST Global Business Empire. All rights reserved.<br>
-        <a href="privacy-policy.html" style="color: gold;">Privacy Policy</a> | 
-        <a href="terms-of-service.html" style="color: gold;">Terms of Service</a>
-    </footer>
-
-    <!-- Cookie Consent Script -->
-    <script>
-        function acceptCookies() {
-            document.getElementById('cookie-consent').style.display = 'none';
-            localStorage.setItem('cookiesAccepted', 'true');
-            // Additional cookie logic can be added here if needed
-        }
-        // Show cookie consent banner if not already accepted
-        if (!localStorage.getItem('cookiesAccepted')) {
-            document.getElementById('cookie-consent').style.display = 'block';
-        }
-    </script>
+  <!-- Cookie Consent Script -->
+  <script>
+    function acceptCookies() {
+      document.getElementById('cookie-consent').style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+      // Additional cookie logic can be added here if needed
+    }
+    // Show cookie consent banner if not already accepted
+    if (!localStorage.getItem('cookiesAccepted')) {
+      document.getElementById('cookie-consent').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
