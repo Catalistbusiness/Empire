@@ -36,7 +36,6 @@
             display: none;
             border-top: 2px solid gold;
         }
-
         #cookie-consent button {
             background: gold;
             color: black;
@@ -46,7 +45,6 @@
             cursor: pointer;
             border-radius: 5px;
         }
-
         #cookie-consent button:hover {
             background: #d4af37;
         }
@@ -63,7 +61,6 @@
             justify-content: space-between;
             align-items: center;
         }
-
         nav a {
             text-decoration: none;
             color: gold;
@@ -71,11 +68,9 @@
             font-weight: bold;
             transition: color 0.3s;
         }
-
         nav a:hover {
             color: white;
         }
-
         /* Logo Styling */
         #logo img {
             height: 50px;
@@ -87,26 +82,22 @@
             text-align: center;
             background-color: #222;
         }
-
         #vision h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: bold;
             text-transform: uppercase;
         }
-
         #vision h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
             color: gold;
         }
-
         #vision p {
             font-size: 1rem;
             margin-bottom: 1.5rem;
             line-height: 1.6;
         }
-
         #vision img {
             max-width: 100%;
             height: auto;
@@ -120,18 +111,15 @@
             background-color: #333;
             text-align: center;
         }
-
         #mission h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
         }
-
         #mission p {
             font-size: 1rem;
             margin-bottom: 1.5rem;
             line-height: 1.6;
         }
-
         #mission img {
             max-width: 100%;
             height: auto;
@@ -145,19 +133,16 @@
             background-color: #222;
             text-align: center;
         }
-
         #core-values h2 {
             font-size: 2rem;
             color: gold;
             margin-bottom: 1rem;
         }
-
         #core-values p {
             font-size: 1rem;
             margin-bottom: 2rem;
             color: #ccc;
         }
-
         .core-values-grid {
             display: flex;
             flex-wrap: wrap;
@@ -166,7 +151,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .core-value {
             flex: 1 1 300px;
             background-color: #333;
@@ -175,13 +159,11 @@
             border: 2px solid gold;
             text-align: center;
         }
-
         .core-value h3 {
             color: gold;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-
         .core-value p {
             color: #ccc;
             line-height: 1.6;
@@ -192,18 +174,15 @@
             padding: 2rem;
             background-color: #222;
         }
-
         .team-gallery h2 {
             text-align: center;
             font-size: 2rem;
             margin-bottom: 1rem;
         }
-
         .team-gallery p {
             text-align: center;
             margin-bottom: 2rem;
         }
-
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -211,7 +190,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .gallery-grid img {
             width: 100%;
             height: auto;
@@ -226,33 +204,27 @@
             background-color: #333;
             text-align: center;
         }
-
         #contact h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
         }
-
         #contact a {
             color: gold;
             text-decoration: none;
             font-weight: bold;
         }
-
         #contact a:hover {
             color: white;
         }
-
         #contact .social-icons {
             margin-top: 1rem;
         }
-
         #contact .social-icons img {
             width: 40px;
             height: 40px;
             margin: 0 0.5rem;
             transition: transform 0.3s;
         }
-
         #contact .social-icons img:hover {
             transform: scale(1.2);
         }
@@ -376,7 +348,6 @@
             localStorage.setItem('cookiesAccepted', 'true');
             // Additional cookie logic can be added here if needed
         }
-
         // Show cookie consent banner if not already accepted
         if (!localStorage.getItem('cookiesAccepted')) {
             document.getElementById('cookie-consent').style.display = 'block';
