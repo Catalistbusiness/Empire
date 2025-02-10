@@ -277,7 +277,8 @@
     <!-- Navigation Bar -->
     <nav>
         <div id="logo">
-            <a href="https://postimages.org/" target="_blank" rel="noopener noreferrer">
+            <!-- Option 1: Clicking the logo navigates to about.html -->
+            <a href="about.html">
                 <img src="https://i.postimg.cc/BZFsJVh8/20241201-122809.jpg" alt="Logo">
             </a>
         </div>
@@ -346,12 +347,14 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Phone: <a href="tel:+251944146818">+251944146818</a></p>
-        <p>Contact Form: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJWPR-NShhjjNP-PQ77cbr0fTNYBhWDl51t5cEAV76PijAyQ/viewform?usp=header_link" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          style="color: gold;">
-            Fill out our contact form
-        </a></p>
+        <p>Contact Form: 
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJWPR-NShhjjNP-PQ77cbr0fTNYBhWDl51t5cEAV76PijAyQ/viewform?usp=header_link" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               style="color: gold;">
+                Fill out our contact form
+            </a>
+        </p>
         <div class="social-icons">
             <a href="https://www.instagram.com/leulyosef73" target="_blank" rel="noopener noreferrer">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
@@ -371,13 +374,13 @@
         function acceptCookies() {
             document.getElementById('cookie-consent').style.display = 'none';
             localStorage.setItem('cookiesAccepted', 'true');
-            // Add your cookie setting logic here
+            // Additional cookie logic can be added here if needed
         }
 
-        // Show banner if not accepted
+        // Show cookie consent banner if not already accepted
         if (!localStorage.getItem('cookiesAccepted')) {
             document.getElementById('cookie-consent').style.display = 'block';
         }
     </script>
 </body>
-    </html>
+</html>
