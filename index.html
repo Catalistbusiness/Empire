@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Security Headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval';">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-  
+
   <!-- Standard Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -382,21 +377,8 @@
   <!-- Footer -->
   <footer>
     &copy; 2025 CATALYST Global Business Empire. All rights reserved.<br>
-    <a href="privacy-policy.html" style="color: gold;">Privacy Policy</a> | 
-    <a href="terms-of-service.html" style="color: gold;">Terms of Service</a>
+    
   </footer>
 
-  <!-- Cookie Consent Script -->
-  <script>
-    function acceptCookies() {
-      document.getElementById('cookie-consent').style.display = 'none';
-      localStorage.setItem('cookiesAccepted', 'true');
-      // Additional cookie logic can be added here if needed
-    }
-    // Show cookie consent banner if not already accepted
-    if (!localStorage.getItem('cookiesAccepted')) {
-      document.getElementById('cookie-consent').style.display = 'block';
-    }
-  </script>
 </body>
 </html>
